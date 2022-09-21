@@ -20,6 +20,33 @@ public primitive class PrimitiveValueObject {
 		this.stringdata = stringdata;
 		this.chardata = chardata;
 	}
-	
+
+	/**
+	 * @return the decdata
+	 */
+	public double getDecdata() {
+		return decdata;
+	}
+
+	/**
+	 * @return the numdata
+	 */
+	public long getNumdata() {
+		return numdata;
+	}
+
+	/**
+	 * @return the stringdata
+	 */
+	public String getStringdata() {
+		return stringdata;
+	}
+
+	/**
+	 * @return the chardata
+	 */
+	public char getChardata() {
+		return chardata;
+	}
 	
 }

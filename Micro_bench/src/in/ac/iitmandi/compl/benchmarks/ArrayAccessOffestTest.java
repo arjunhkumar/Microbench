@@ -3,6 +3,8 @@ package in.ac.iitmandi.compl.benchmarks;
 import java.util.ArrayList;
 
 import in.ac.iitmandi.compl.objects.NonPrimitiveObject;
+import in.ac.iitmandi.compl.objects.NonPrimitiveObjectContainer;
+import in.ac.iitmandi.compl.objects.PrimitiveObjectContainer;
 import in.ac.iitmandi.compl.objects.PrimitiveValueObject;
 
 public class ArrayAccessOffestTest {
@@ -10,7 +12,7 @@ public class ArrayAccessOffestTest {
 	
 	public void testLoadArray(boolean isPrimitiveObject){
 		long startTime = System.currentTimeMillis();
-		long limit = 10000L;
+		long limit = 10000;
 		if(isPrimitiveObject) {
 			for(long i=0;i<limit;i++) {
 				runArrayLoadTestPrimitive();
@@ -26,52 +28,52 @@ public class ArrayAccessOffestTest {
 	
 	
 	public void runArrayLoadTestPrimitive() {
-		ArrayList<PrimitiveValueObject.ref> primitiveList = new ArrayList();
-		long limit = 1000000L;
+		ArrayList<PrimitiveObjectContainer> primitiveList = new ArrayList();
+		long limit = 20000;
 			for(long i=0;i<limit;i++) {
-				primitiveList.add(new PrimitiveValueObject(i, i, "test", 't'));
+				primitiveList.add(new PrimitiveObjectContainer(i, i, "test", 't'));
 			}
-			PrimitiveValueObject.ref[] array = new PrimitiveValueObject[primitiveList.size()];
+			PrimitiveObjectContainer[] array = new PrimitiveObjectContainer[primitiveList.size()];
 			array = primitiveList.toArray(array);
 		
 		for(long i=0;i<limit;i++) {
-			testOffsetArrayAccess(1000000,1000000,array);
+			testOffsetArrayAccess(20000,20000,array);
 		}
 		
 	}
 	
-	public static Long testOffsetArrayAccess(int maxAccess, int size, PrimitiveValueObject.ref[] array) {
+	public static Long testOffsetArrayAccess(int maxAccess, int size, PrimitiveObjectContainer[] array) {
 		long sum = 0;
 		int andSize = size - 1;
 		for (int i = 0; i < maxAccess; i++) {
 			int pos = i & andSize;
-			sum += array[pos].numdata;
+			sum += array[pos].getPvo().getNumdata();
 		}
 		return sum;
 	}
 	
 	public void runArrayLoadTestNonPrimitive() {
-		ArrayList<NonPrimitiveObject> nonPrimitiveList = new ArrayList();
-		long limit = 1000000L;
+		ArrayList<NonPrimitiveObjectContainer> nonPrimitiveList = new ArrayList();
+		long limit = 20000;
 			for(long i=0;i<limit;i++) {
-				nonPrimitiveList.add(new NonPrimitiveObject(i, i, "test", 't'));
+				nonPrimitiveList.add(new NonPrimitiveObjectContainer(i, i, "test", 't'));
 			}
 			
-			NonPrimitiveObject[] array = new NonPrimitiveObject[nonPrimitiveList.size()];
+			NonPrimitiveObjectContainer[] array = new NonPrimitiveObjectContainer[nonPrimitiveList.size()];
 			array = nonPrimitiveList.toArray(array);
 			
 		for(long i=0;i<limit;i++) {
-			testOffsetArrayAccessNP(1000000,1000000,array);
+			testOffsetArrayAccessNP(20000,20000,array);
 		}
 		
 	}
 	
-	public static Long testOffsetArrayAccessNP(int maxAccess, int size, NonPrimitiveObject[] array) {
+	public static Long testOffsetArrayAccessNP(int maxAccess, int size, NonPrimitiveObjectContainer[] array) {
 		long sum = 0;
 		int andSize = size - 1;
 		for (int i = 0; i < maxAccess; i++) {
 			int pos = i & andSize;
-			sum += array[pos].getNumdata();
+			sum += array[pos].getNpvo().getNumdata();
 		}
 		return sum;
 	}

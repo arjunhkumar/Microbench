@@ -23,6 +23,7 @@ public class CommonConstants {
 	}
 	
 	public static final String LOOPTEST = "LOOPTEST";
+	public static final String SINGLEOBJECTLOOPTEST = "SINGLEOBJECTLOOPTEST";
 	public static final String ARRAYACCESSOFFESTTEST = "ARRAYACCESSOFFESTTEST";
 	public static final String ARRAYACCESSRANDOMTEST = "ARRAYACCESSRANDOMTEST";
 }

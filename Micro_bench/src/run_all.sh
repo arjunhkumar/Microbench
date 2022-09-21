@@ -1,4 +1,3 @@
-benchmark=$1
 _java_="/home/arjun/Working_Directory/Softwares/Utilities/openj9-valuetypes/jdk/bin/java"
 
 run_bench() {
@@ -29,4 +28,6 @@ run_bench() {
     done
 }
 
-run_bench $benchmark
+run_bench "LOOPTEST"
+run_bench "ARRAYACCESSOFFESTTEST"
+run_bench "ARRAYACCESSRANDOMTEST"

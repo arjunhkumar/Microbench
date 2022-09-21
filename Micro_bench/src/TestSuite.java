@@ -6,6 +6,7 @@
 import in.ac.iitmandi.compl.benchmarks.ArrayAccessOffestTest;
 import in.ac.iitmandi.compl.benchmarks.ArrayAccessRandomTest;
 import in.ac.iitmandi.compl.benchmarks.LoopTest;
+import in.ac.iitmandi.compl.benchmarks.SingleObjectLoopTest;
 import in.ac.iitmandi.compl.helper.CommonConstants;
 import in.ac.iitmandi.compl.helper.CommonUtils;
 
@@ -31,6 +32,9 @@ public class TestSuite {
 				if(benchmark.equalsIgnoreCase(CommonConstants.LOOPTEST)) {
 					LoopTest lt = new LoopTest();
 					lt.testPrimitiveLoadLoop(isPrimitive);
+				}else if(benchmark.equalsIgnoreCase(CommonConstants.SINGLEOBJECTLOOPTEST)) {
+					SingleObjectLoopTest solt = new SingleObjectLoopTest();
+					solt.testPrimitiveLoadLoop(isPrimitive);
 				}else if(benchmark.equalsIgnoreCase(CommonConstants.ARRAYACCESSOFFESTTEST)) {
 					ArrayAccessOffestTest at = new ArrayAccessOffestTest();
 					at.testLoadArray(isPrimitive);

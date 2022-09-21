@@ -14,7 +14,7 @@ import in.ac.iitmandi.compl.objects.PrimitiveValueObject;
  * @author arjun
  *
  */
-public class LoopTest {
+public class SingleObjectLoopTest {
 
 	public void testPrimitiveLoadLoop(boolean isPrimitiveObject){
 		long startTime = System.currentTimeMillis();
@@ -28,26 +28,18 @@ public class LoopTest {
 
 	private void executeTest(boolean isPrimitiveObject) {
 		long limit = 20000;
-		ArrayList<PrimitiveObjectContainer> primitiveList = new ArrayList();
-		ArrayList<NonPrimitiveObjectContainer> nonPrimitiveList = new ArrayList();
 		if(isPrimitiveObject) {
-			for(long i=0;i<limit;i++) {
-				primitiveList.add(new PrimitiveObjectContainer(i, i, "test", 't'));
-			}
+			PrimitiveObjectContainer primObj = new PrimitiveObjectContainer(1, 1, "test", 't');
 			long sum = 0L;
-			for(PrimitiveObjectContainer pobj:primitiveList) {
-				sum+=pobj.getPvo().getNumdata() + pobj.getPvo().getDecdata();
+			for(long i=0;i<limit;i++) {
+				sum+=primObj.getPvo().getNumdata() + primObj.getPvo().getDecdata();
 			}
-//			System.out.println("Sum: "+sum);
 		} else {
-			for(long i=0;i<limit;i++) {
-				nonPrimitiveList.add(new NonPrimitiveObjectContainer(i, i, "test", 't'));
-			}
+			NonPrimitiveObjectContainer nonPrimObj = new NonPrimitiveObjectContainer(1, 1, "test", 't');
 			long sum = 0L;
-			for(NonPrimitiveObjectContainer npobj:nonPrimitiveList) {
-				sum+=npobj.getNpvo().getNumdata() + npobj.getNpvo().getDecdata();
+			for(long i=0;i<limit;i++) {
+				sum+=nonPrimObj.getNpvo().getNumdata() + nonPrimObj.getNpvo().getDecdata();
 			}
-//			System.out.println("Sum: "+sum);
 		}
 	}
 	
