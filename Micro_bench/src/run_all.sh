@@ -1,3 +1,4 @@
+#-----Modify the path to java_home below.
 _java_="/home/arjun/Working_Directory/Softwares/Utilities/openj9-valuetypes/jdk/bin/java"
 
 run_bench() {

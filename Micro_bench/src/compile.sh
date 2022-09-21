@@ -1,2 +1,6 @@
-export JAVA_HOME="/home/arjun/Working_Directory/Softwares/Utilities/openj9-valuetypes/jdk"
-/home/arjun/Working_Directory/Softwares/Utilities/openj9-valuetypes/jdk/bin/javac TestSuite.java
+#-----Modify the path to java_home below.
+benchmark=$1
+_javac_="/home/arjun/Working_Directory/Softwares/Utilities/openj9-valuetypes/jdk/bin/javac"
+
+
+`$_javac_ TestSuite.java`

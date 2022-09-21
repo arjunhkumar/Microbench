@@ -1,3 +1,4 @@
+#-----Modify the path to java_home below.
 benchmark=$1
 _java_="/home/arjun/Working_Directory/Softwares/Utilities/openj9-valuetypes/jdk/bin/java"
 
