@@ -28,6 +28,7 @@ run_bench() {
     done
 }
 
+run_bench "SINGLEOBJECTLOOPTEST"
 run_bench "LOOPTEST"
 run_bench "ARRAYACCESSOFFESTTEST"
 run_bench "ARRAYACCESSRANDOMTEST"

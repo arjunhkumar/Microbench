@@ -22,7 +22,7 @@ public class ArrayAccessRandomTest {
 			}
 		}
 		long endTime = System.currentTimeMillis();
-		System.out.println("Execution time for loop bench: "+(endTime-startTime));
+		System.out.println("Execution time for ArrayAccessRandomTest bench: "+(endTime-startTime));
 	}
 	
 	public void runArrayLoadTestPrimitive() {

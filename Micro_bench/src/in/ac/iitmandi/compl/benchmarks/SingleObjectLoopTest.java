@@ -23,7 +23,7 @@ public class SingleObjectLoopTest {
 			executeTest(isPrimitiveObject);
 		}
 		long endTime = System.currentTimeMillis();
-		System.out.println("Execution time for loop bench: "+(endTime-startTime));
+		System.out.println("Execution time for SingleObjectLoopTest bench: "+(endTime-startTime));
 	}
 
 	private void executeTest(boolean isPrimitiveObject) {
