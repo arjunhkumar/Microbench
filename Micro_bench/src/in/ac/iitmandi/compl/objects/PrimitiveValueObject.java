@@ -9,10 +9,10 @@ package in.ac.iitmandi.compl.objects;
  */
 public primitive class PrimitiveValueObject {
 
-	double decdata;
-	long numdata;
-	String stringdata;
-	char chardata;
+	public double decdata;
+	public long numdata;
+	public String stringdata;
+	public char chardata;
 	
 	public PrimitiveValueObject(double decdata, long numdata, String stringdata, char chardata) {
 		this.decdata = decdata;
