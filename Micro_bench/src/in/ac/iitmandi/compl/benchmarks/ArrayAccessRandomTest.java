@@ -9,10 +9,10 @@ import in.ac.iitmandi.compl.objects.PrimitiveValueObject;
 
 public class ArrayAccessRandomTest {
 
-	public void testLoadArray(boolean isPrimitiveObject){
+	public void testLoadArray(boolean isPrimitiveObjectTest){
 		long startTime = System.currentTimeMillis();
 		long limit = 10000;
-		if(isPrimitiveObject) {
+		if(isPrimitiveObjectTest) {
 			for(long i=0;i<limit;i++) {
 				runArrayLoadTestPrimitive();
 			}

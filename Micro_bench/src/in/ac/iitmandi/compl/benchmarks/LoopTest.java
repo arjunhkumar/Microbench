@@ -16,21 +16,21 @@ import in.ac.iitmandi.compl.objects.PrimitiveValueObject;
  */
 public class LoopTest {
 
-	public void testPrimitiveLoadLoop(boolean isPrimitiveObject){
+	public void testPrimitiveLoadLoop(boolean nonReqClass){
 		long startTime = System.currentTimeMillis();
 		long limit = 20000;
 		for(long i=0;i<limit;i++) {
-			executeTest(isPrimitiveObject);
+			executeTest(isPrimitiveObjectTest);
 		}
 		long endTime = System.currentTimeMillis();
 		System.out.println("Execution time for LoopTest bench: "+(endTime-startTime));
 	}
 
-	private void executeTest(boolean isPrimitiveObject) {
+	private void executeTest(boolean isPrimitiveObjectTest) {
 		long limit = 20000;
 		ArrayList<PrimitiveObjectContainer> primitiveList = new ArrayList();
 		ArrayList<NonPrimitiveObjectContainer> nonPrimitiveList = new ArrayList();
-		if(isPrimitiveObject) {
+		if(isPrimitiveObjectTest) {
 			for(long i=0;i<limit;i++) {
 				primitiveList.add(new PrimitiveObjectContainer(i, i, "test", 't'));
 			}
