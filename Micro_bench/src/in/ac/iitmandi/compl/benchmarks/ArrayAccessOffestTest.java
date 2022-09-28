@@ -1,18 +1,18 @@
 package in.ac.iitmandi.compl.benchmarks;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import in.ac.iitmandi.compl.objects.NonPrimitiveObject;
 import in.ac.iitmandi.compl.objects.NonPrimitiveObjectContainer;
 import in.ac.iitmandi.compl.objects.PrimitiveObjectContainer;
-import in.ac.iitmandi.compl.objects.PrimitiveValueObject;
 
 public class ArrayAccessOffestTest {
 
 	
 	public void testLoadArray(boolean isPrimitiveObjectTest){
 		long startTime = System.currentTimeMillis();
-		long limit = 10000;
+		long limit = 5000;
 		if(isPrimitiveObjectTest) {
 			for(long i=0;i<limit;i++) {
 				runArrayLoadTestPrimitive();
@@ -28,10 +28,10 @@ public class ArrayAccessOffestTest {
 	
 	
 	public void runArrayLoadTestPrimitive() {
-		ArrayList<PrimitiveObjectContainer> primitiveList = new ArrayList();
-		long limit = 20000;
+		List<PrimitiveObjectContainer> primitiveList = new ArrayList<>();
+		long limit = 1000;
 			for(long i=0;i<limit;i++) {
-				primitiveList.add(new PrimitiveObjectContainer(i, i, "test", 't'));
+				primitiveList.add(new PrimitiveObjectContainer(i, i, 't'));
 			}
 			PrimitiveObjectContainer[] array = new PrimitiveObjectContainer[primitiveList.size()];
 			array = primitiveList.toArray(array);
@@ -53,10 +53,10 @@ public class ArrayAccessOffestTest {
 	}
 	
 	public void runArrayLoadTestNonPrimitive() {
-		ArrayList<NonPrimitiveObjectContainer> nonPrimitiveList = new ArrayList();
-		long limit = 20000;
+		List<NonPrimitiveObjectContainer> nonPrimitiveList = new ArrayList<>();
+		long limit = 1000;
 			for(long i=0;i<limit;i++) {
-				nonPrimitiveList.add(new NonPrimitiveObjectContainer(i, i, "test", 't'));
+				nonPrimitiveList.add(new NonPrimitiveObjectContainer(i, i, 't'));
 			}
 			
 			NonPrimitiveObjectContainer[] array = new NonPrimitiveObjectContainer[nonPrimitiveList.size()];

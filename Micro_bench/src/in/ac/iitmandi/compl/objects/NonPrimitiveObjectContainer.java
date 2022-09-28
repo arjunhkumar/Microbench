@@ -14,8 +14,8 @@ public class NonPrimitiveObjectContainer {
 	/**
 	 * @param npvo
 	 */
-	public NonPrimitiveObjectContainer(double decdata, long numdata, String stringdata, char chardata) {
-		this.npvo = new NonPrimitiveObject(decdata, numdata, stringdata, chardata);
+	public NonPrimitiveObjectContainer(double decdata, long numdata, char chardata) {
+		this.npvo = new NonPrimitiveObject(decdata, numdata,chardata);
 	}
 
 	/**

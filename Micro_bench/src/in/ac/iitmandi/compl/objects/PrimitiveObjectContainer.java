@@ -14,8 +14,8 @@ public class PrimitiveObjectContainer {
 	/**
 	 * @param pvo
 	 */
-	public PrimitiveObjectContainer(double decdata, long numdata, String stringdata, char chardata) {
-		this.pvo = new PrimitiveValueObject(decdata, numdata, stringdata, chardata);
+	public PrimitiveObjectContainer(double decdata, long numdata, char chardata) {
+		this.pvo = new PrimitiveValueObject(decdata, numdata, chardata);
 	}
 
 	/**

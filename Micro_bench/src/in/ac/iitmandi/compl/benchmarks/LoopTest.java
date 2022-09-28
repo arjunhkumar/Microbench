@@ -16,7 +16,7 @@ import in.ac.iitmandi.compl.objects.PrimitiveValueObject;
  */
 public class LoopTest {
 
-	public void testPrimitiveLoadLoop(boolean nonReqClass){
+	public void testPrimitiveLoadLoop(boolean isPrimitiveObjectTest){
 		long startTime = System.currentTimeMillis();
 		long limit = 20000;
 		for(long i=0;i<limit;i++) {
@@ -32,22 +32,20 @@ public class LoopTest {
 		ArrayList<NonPrimitiveObjectContainer> nonPrimitiveList = new ArrayList();
 		if(isPrimitiveObjectTest) {
 			for(long i=0;i<limit;i++) {
-				primitiveList.add(new PrimitiveObjectContainer(i, i, "test", 't'));
+				primitiveList.add(new PrimitiveObjectContainer(i, i, 't'));
 			}
 			long sum = 0L;
 			for(PrimitiveObjectContainer pobj:primitiveList) {
 				sum+=pobj.getPvo().getNumdata() + pobj.getPvo().getDecdata();
 			}
-//			System.out.println("Sum: "+sum);
 		} else {
 			for(long i=0;i<limit;i++) {
-				nonPrimitiveList.add(new NonPrimitiveObjectContainer(i, i, "test", 't'));
+				nonPrimitiveList.add(new NonPrimitiveObjectContainer(i, i, 't'));
 			}
 			long sum = 0L;
 			for(NonPrimitiveObjectContainer npobj:nonPrimitiveList) {
 				sum+=npobj.getNpvo().getNumdata() + npobj.getNpvo().getDecdata();
 			}
-//			System.out.println("Sum: "+sum);
 		}
 	}
 	

@@ -11,13 +11,11 @@ public primitive class PrimitiveValueObject {
 
 	public double decdata;
 	public long numdata;
-	public String stringdata;
 	public char chardata;
 	
-	public PrimitiveValueObject(double decdata, long numdata, String stringdata, char chardata) {
+	public PrimitiveValueObject(double decdata, long numdata, char chardata) {
 		this.decdata = decdata;
 		this.numdata = numdata;
-		this.stringdata = stringdata;
 		this.chardata = chardata;
 	}
 
@@ -33,13 +31,6 @@ public primitive class PrimitiveValueObject {
 	 */
 	public long getNumdata() {
 		return numdata;
-	}
-
-	/**
-	 * @return the stringdata
-	 */
-	public String getStringdata() {
-		return stringdata;
 	}
 
 	/**

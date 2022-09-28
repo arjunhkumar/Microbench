@@ -11,13 +11,12 @@ public class NonPrimitiveObject {
 
 	double decdata;
 	long numdata;
-	String stringdata;
+//	String stringdata;
 	char chardata;
 	
-	public NonPrimitiveObject(double decdata, long numdata, String stringdata, char chardata) {
+	public NonPrimitiveObject(double decdata, long numdata, char chardata) {
 		this.decdata = decdata;
 		this.numdata = numdata;
-		this.stringdata = stringdata;
 		this.chardata = chardata;
 	}
 
@@ -49,19 +48,6 @@ public class NonPrimitiveObject {
 		this.numdata = numdata;
 	}
 
-	/**
-	 * @return the stringdata
-	 */
-	public String getStringdata() {
-		return stringdata;
-	}
-
-	/**
-	 * @param stringdata the stringdata to set
-	 */
-	public void setStringdata(String stringdata) {
-		this.stringdata = stringdata;
-	}
 
 	/**
 	 * @return the chardata

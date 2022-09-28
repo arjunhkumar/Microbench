@@ -29,13 +29,13 @@ public class SingleObjectLoopTest {
 	private void executeTest(boolean isPrimitiveObjectTest) {
 		long limit = 20000;
 		if(isPrimitiveObjectTest) {
-			PrimitiveObjectContainer primObj = new PrimitiveObjectContainer(1, 1, "test", 't');
+			PrimitiveObjectContainer primObj = new PrimitiveObjectContainer(1, 1, 't');
 			long sum = 0L;
 			for(long i=0;i<limit;i++) {
 				sum+=primObj.getPvo().getNumdata() + primObj.getPvo().getDecdata();
 			}
 		} else {
-			NonPrimitiveObjectContainer nonPrimObj = new NonPrimitiveObjectContainer(1, 1, "test", 't');
+			NonPrimitiveObjectContainer nonPrimObj = new NonPrimitiveObjectContainer(1, 1, 't');
 			long sum = 0L;
 			for(long i=0;i<limit;i++) {
 				sum+=nonPrimObj.getNpvo().getNumdata() + nonPrimObj.getNpvo().getDecdata();
